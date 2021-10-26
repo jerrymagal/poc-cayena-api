@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "ba1932e1-2604-4047-9511-6fe952d4e40f",
+		"name": "cayena",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cayena-api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cayena-api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Uuid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cayena-api/v1/products/ef70daa7-863b-4075-b2df-b836f3ec3edf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cayena-api",
+						"v1",
+						"products",
+						"ef70daa7-863b-4075-b2df-b836f3ec3edf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product 3\",\r\n    \"unitPrice\": 15.00,\r\n    \"stockQuantity\": 17,\r\n    \"supplier\": {\r\n        \"uuid\": \"b2d9d13a-1292-4611-b8d5-aefff2755bf0\",\r\n        \"name\": \"Supplier 1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cayena-api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cayena-api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product 2\",\r\n    \"unitPrice\": 11.00,\r\n    \"stockQuantity\": 18,\r\n    \"supplier\": {\r\n        \"uuid\": \"b2d9d13a-1292-4611-b8d5-aefff2755bf0\",\r\n        \"name\": \"Supplier 1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cayena-api/v1/products/4b3a266f-ed08-4d3d-8f53-f0c13396f10a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cayena-api",
+						"v1",
+						"products",
+						"4b3a266f-ed08-4d3d-8f53-f0c13396f10a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quantity",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product 2\",\r\n    \"unitPrice\": 11.00,\r\n    \"stockQuantity\": 10,\r\n    \"supplier\": {\r\n        \"uuid\": \"b2d9d13a-1292-4611-b8d5-aefff2755bf0\",\r\n        \"name\": \"Supplier 1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cayena-api/v1/products/1c86cefa-d32c-485c-9002-a151017ed244/stock-quantity?quantity=-18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cayena-api",
+						"v1",
+						"products",
+						"1c86cefa-d32c-485c-9002-a151017ed244",
+						"stock-quantity"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "-18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cayena-api/v1/products/4b3a266f-ed08-4d3d-8f53-f0c13396f10a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cayena-api",
+						"v1",
+						"products",
+						"4b3a266f-ed08-4d3d-8f53-f0c13396f10a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
