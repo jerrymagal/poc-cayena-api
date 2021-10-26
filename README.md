@@ -21,4 +21,4 @@ de comunicação externa. Fui utilizado o padrão Rest com Hateoas.
 # Execução
 > Para rodar a aplicação basta clonar o projeto, configurar a url de banco no arquivo application.properties e sublicar a aplicação. Foi utilizado o flyway para rodar
 os scripts de criação das tabelas bem como inserts.
-> Na pasta postman na raiz do projeto esta a collection que pode ser importada e utrilizada para testar a api.
+> Na pasta postman na raiz do projeto esta a collection que pode ser importada e utilizada para testar a api.
